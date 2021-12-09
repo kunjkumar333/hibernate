@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-Jun-2021, 11:47:18 am by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+<class name="com.coforge.training.model.Student" table="Student">
+<id name="StudentId" type="java.lang.Integer">
+<column name="STUDENTID" />
+<generator class="identity" />
+</id>
+<property name="studentName" type="java.lang.String">
+<column name="STUDENTNAME" />
+</property>
+<property name="Course" type="java.lang.String">
+<column name="COURSE" />
+</property>
+<property name="marks" type="java.lang.Integer">
+<column name="MARKS" />
+</property>
+</class>
+</hibernate-mapping>
