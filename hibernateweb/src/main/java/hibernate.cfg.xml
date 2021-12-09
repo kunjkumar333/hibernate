@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+
+<property name="hbm2ddl.auto">update</property>
+<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<property name="hibernate.connection.password">cfg@1234</property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/coforgedb</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+<mapping resource="User.hbm.xml" />
+<mapping resource="Employee.hbm.xml" />
+<mapping resource="Person.hbm.xml" />
+<mapping resource="Student.hbm.xml" />
+<mapping class="com.coforge.training.hibernateweb.Question" />
+<mapping class="com.coforge.training.hibernateweb.Answer" />
+<mapping class="com.coforge.training.hibernateweb.Cart" />
+<mapping class="com.coforge.training.hibernateweb.Items" />
+<mapping class="com.coforge.training.hibernateweb.Transact" />
+<mapping class="com.coforge.training.hibernateweb.Customer" />
+</session-factory>
+</hibernate-configuration>
+
