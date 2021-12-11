@@ -28,8 +28,6 @@ sess.beginTransaction();
 
 String hql = "update User set password = :password where id = :id";
 
-
-
 Query query = sess.createQuery(hql);
 query.setParameter("password","cool123");
 query.setParameter("id",1);
@@ -39,8 +37,9 @@ if (rowsAffected > 0) {
 out.println("Updated " + rowsAffected + " rows.");
 }
 
-String hql1 = "delete from User where id = :id";query = sess.createQuery(hql1);
-query.setParameter("id", 3);
+String hql1 = "delete from User where id = :id";
+query = sess.createQuery(hql1);
+query.setParameter("id", 4);
 rowsAffected = query.executeUpdate();
 if (rowsAffected > 0) {
 out.println("Deleted " + rowsAffected + " rows.");
